@@ -13,13 +13,13 @@ INSTALLDIRS = $(SUBDIRS:%=install-%)
 all: $(patsubst %.md,%.html,$(wildcard *.md)) INSTALL README Makefile $(SUBDIRS) osml10n.control osml10n_thai_transcript.control country_languages.data  osml10n_country_osm_grid.data
 
 INSTALL: INSTALL.md
-	pandoc --from markdown_github --to plain --standalone $< --output $@
+	echo "disabled"
 
 README: README.md
-	pandoc --from markdown_github --to plain --standalone $< --output $@
+	echo "disabled"
 
 %.html: %.md
-	pandoc --from markdown_github --to html --standalone $< --output $@
+	echo "disabled"
 
 .PHONY:	subdirs $(SUBDIRS)
       
